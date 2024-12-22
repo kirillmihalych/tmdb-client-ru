@@ -29,7 +29,9 @@ npm run dev
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-npm run build
+npm run buildgit remote add origin https://github.com/kirillmihalych/tmdb-client-ru.git
+git branch -M main
+git push -u origin main
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
