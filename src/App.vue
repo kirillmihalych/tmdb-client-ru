@@ -1,13 +1,11 @@
 <script setup lang="ts">
-
+import MovieListView from "./views/MovieListView.vue";
 </script>
 
 <template>
   <main>
-    <p>Hello there</p>
+    <MovieListView />
   </main>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

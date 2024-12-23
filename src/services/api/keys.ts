@@ -1,0 +1,4 @@
+const token: string =
+  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZjAyNDAwY2I2N2FhZWYwODU2NGRmMjk4MDdlMTM3YiIsIm5iZiI6MTcwODg1MjcyNS4wNDQsInN1YiI6IjY1ZGIwNWY1YWUyODExMDE3YzRjOGM1MCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H_cjQC6swCHNKQ0p1H1mmreEMAodck1ZVWZMwg4Tf30";
+
+export { token };
