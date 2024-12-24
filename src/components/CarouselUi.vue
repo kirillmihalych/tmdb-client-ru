@@ -1,21 +1,25 @@
 <template>
   <div class="carousel-wrapper">
     <ul class="carousel">
-      <li v-for="item in props.items" :key="item.id" class="carousel__item">
+      <li
+        v-for="(item, index) in props.items"
+        :key="index"
+        class="carousel__item"
+      >
         <slot :item="item"></slot>
       </li>
     </ul>
   </div>
 </template>
 
-<script setup lang="ts" generic="T">
+<script setup lang="ts">
 interface ICarouselUi {
-  items: T[];
+  items: unknown[];
 }
 
 const props = defineProps<ICarouselUi>();
-const slots = defineSlots<{
-  default(props: { item: T }): void;
+defineSlots<{
+  default(props: { item: unknown }): void;
 }>();
 </script>
 

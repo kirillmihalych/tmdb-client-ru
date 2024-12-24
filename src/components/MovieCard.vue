@@ -24,6 +24,12 @@ export interface IMovieCard {
   rating: number;
 }
 
+export interface IMovie {
+  poster_path: string;
+  title: string;
+  vote_average: number;
+}
+
 const props = defineProps<IMovieCard>();
 const posterPath = computed(() => {
   return (

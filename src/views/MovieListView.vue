@@ -4,9 +4,9 @@
     <div v-else-if="isError">error. {{ error?.message }}</div>
     <CarouselUi v-else-if="data" :items="data.results" v-slot="{ item: movie }">
       <MovieCard
-        :poster="movie.poster_path"
-        :title="movie.title"
-        :rating="movie.vote_average"
+        :poster="(movie as IMovie).poster_path"
+        :title="(movie as IMovie).title"
+        :rating="(movie as IMovie).vote_average"
       />
     </CarouselUi>
   </div>
@@ -17,6 +17,7 @@ import { useQuery } from "@tanstack/vue-query";
 import MovieCard from "@/components/MovieCard.vue";
 import getMovieList from "@/services/api/getMovieList";
 import CarouselUi from "@/components/CarouselUi.vue";
+import type { IMovie } from "@/components/MovieCard.vue";
 
 const { isPending, isError, data, error } = useQuery({
   queryKey: ["movie-list"],
